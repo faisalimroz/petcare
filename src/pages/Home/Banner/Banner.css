@@ -1,0 +1,8 @@
+#banner{
+    background-image: url('../../../assets/petcarefeed.png');
+    opacity: 0.9;
+ 
+}
+.banners{
+    z-index: 0;
+}
