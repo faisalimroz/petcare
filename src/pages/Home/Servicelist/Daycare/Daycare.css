@@ -1,0 +1,37 @@
+/* Daycare.css */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+}
+
+.blog {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+.blog-img {
+    width: 100%;
+    max-width: 400px; /* Adjust the value as needed */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* ... (other styles) */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .form-div {
+        order: -1;
+    }
+}

@@ -1,13 +1,14 @@
+import { useContext, useState } from 'react';
 import './Login.css';
-import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../../Context/AuthProvider';
+import { AuthContext } from '../../../providers/AuthProvider';
 const Login = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const navigate= useNavigate()
-    const {signIn}= useContext(AuthContext)
-    const onSubmits = data => {
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const {signIn}=useContext(AuthContext)
+    const [loginError, setLoginError] = useState('')
+    const navigate=useNavigate()
+    const onSubmits=(data)=>{
         console.log(data)
         signIn(data.email,data.password)
         .then(result=>{
@@ -15,21 +16,21 @@ const Login = () => {
             console.log(user)
             navigate('/')
         })
-        .catch(error => {
+        .catch(error=>{
             console.log(error)
-           
+            setLoginError(error)
         })
-    
+
     }
-   
     return (
+
         <>
             <div className="hero min-h-screen ">
                 <div className="hero-content flex-col lg:flex-row-reverse bg-base-200">
 
                     <div className="card md:w-1/2 flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form className="card-body" onSubmit={handleSubmit(onSubmits)}>
-                           
+
                             <div className="form-control ">
                                 <label className="label" htmlFor="email">
                                     <span className="label-text">Email</span>
@@ -49,21 +50,22 @@ const Login = () => {
                             </div>
                             <div className="form-control mt-6">
 
-                                <input className="btn btn-primary" type="submit" value="Signup" />
+                                <input className="btn btn-primary" type="submit" value="Login" />
                             </div>
                             <div>
-                                {/* {signUpError && <p className='text-red-600'>{signUpError}</p>} */}
-                            </div>
+                            {loginError && <p>{loginError}</p>}
+                        </div>
                         </form>
-                        <p><small>Already have an account? <Link to='/login'>Login</Link></small></p>
+                        <p className='text-center'>Don't have an account? <Link to='/signup'>Signup</Link></p>
                     </div>
                     <div className="text-center lg:text-left md:w-1/2">
-                        <h1 className="text-5xl font-bold">Signup now!</h1>
+                        <h1 className="text-5xl font-bold">Login now!</h1>
                         <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                     </div>
                 </div>
             </div>
         </>
+
     );
 };
 

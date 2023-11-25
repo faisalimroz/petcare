@@ -1,3 +1,4 @@
+import Addreview from '../../../Review/Addreview/Addreview';
 import './Contactus.css'
 import ContactusBanner from './ContactusBanner/ContactusBanner';
 import ContactusForm from './ContactusForm/ContactusForm';
@@ -17,8 +18,8 @@ const Contactus = () => {
                
                   <div className='mail'>
                     <h1 className='font-black'>Location</h1>
-                    <p>travelbug@gmail.com</p>
-                    <p>+8801864562819</p>
+                    <p>petcare@gmail.com</p>
+                    <p>+8801608827084</p>
 
                   </div>
                   <div className='mail'>
@@ -38,7 +39,7 @@ const Contactus = () => {
 
             </div>
           <div className='mb-5'>
-              <ContactusForm></ContactusForm>
+              <Addreview></Addreview>
           </div>
         </div>
     );

@@ -7,7 +7,7 @@ import './ContactusBanner.css'
 const ContactusBanner = () => {
     return (
         <div>
-        <div className="hero min-h-[70vh] " style={{ backgroundImage: 'url(https://i.ibb.co/s3X9xLg/adventure-travel.jpg)' }}>
+        <div className="hero min-h-[70vh] " style={{ backgroundImage: 'url(https://i.ibb.co/NYzZ7T8/image.png)' }}>
             <div className=" bg-opacity-60"></div>
             <div className="hero-content text-center ">
                 <div className="max-w-md">

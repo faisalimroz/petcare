@@ -1,0 +1,91 @@
+/* Grooming.css */
+
+.blog {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .blog-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+  }
+  
+  .blog-div {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .blog-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .blog-p {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .form-div {
+    flex: 1;
+  }
+  
+  .vertical-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Style for date input */
+  .form-group input[type="date"] {
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  /* Style for member buttons */
+  .form-group button {
+    padding: 8px 12px;
+    font-size: 16px;
+    margin: 0 5px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .form-group p {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  /* Style for submit button */
+  .form-group button[type="submit"] {
+    background-color: #2196f3;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .blog {
+      flex-direction: column;
+    }
+  
+    .blog-div,
+    .form-div {
+      margin-right: 0;
+    }
+  
+    .blog-img {
+      margin-bottom: 20px;
+    }
+  }
+  

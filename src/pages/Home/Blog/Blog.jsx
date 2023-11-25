@@ -8,7 +8,7 @@ const Blog = () => {
     
     // setArrr(arrr.sort(0, 6))
     useEffect(()=>{
-        fetch('blog.json')
+        fetch('http://localhost:5000/blog')
         .then(res=>res.json())
         .then(data=>setBlog(data))
     },[])
@@ -16,7 +16,7 @@ const Blog = () => {
         <div className='mt-8  flex flex-wrap justify-evenly'>
          
              {
-                blogs.map(blog=><Blogdetail key={blog.id} blog={blog}></Blogdetail>)
+                blogs.map(blog=><Blogdetail key={blog._id} blog={blog}></Blogdetail>)
              }
         </div>
     );

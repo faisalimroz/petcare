@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
-import './Navbar.css'
+import './Navbar.css';
 import { useContext } from 'react';
-import { AuthContext } from '../../../Context/AuthProvider';
+import { AuthContext } from '../../../providers/AuthProvider';
+
 const Navbar = () => {
-    const { user, logOut } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext)
     const handleLogout = () => {
         logOut()
             .then(() => {
@@ -14,8 +15,8 @@ const Navbar = () => {
             })
     }
     return (
-        <div>
-              <div className="navbar bg-gray-200 h-20">
+        <div className='nav'>
+            <div className="navbar bg-gray-200 h-20">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -24,13 +25,41 @@ const Navbar = () => {
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                             <li><Link to='/home'>Home</Link></li>
                             <li><Link to='/services'>Services</Link></li>
+                           
                             <li><Link to='/blog'>Blog</Link></li>
+                            {/* <li tabIndex={1}>
+                                    <a>
+                                        Blogs
+                                        <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
+                                    </a>
+                                    <ul className="p-2 bg-base-100">
+                                        <li><Link to='/blog'>Blog</Link></li>
+                                        <li><Link to='/news'>News</Link></li>
+
+
+                                    </ul>
+                                </li> */}
                             <li><Link to='/contactus'>Contact Us</Link></li>
+
                             {
-                                        user?.uid? <li><button onClick={handleLogout}>Sign out</button></li>: <li><Link to='/login'>Login</Link></li>
-                            }
-                         
-                         
+                                    user?.uid ? (
+                                        <div className="dropdown dropdown-end  mt-4">
+                                            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                                <div className="w-10 rounded-full">
+                                                    <img src={user.photoURL} alt='ddd' />
+                                                </div>
+                                            </label>
+                                            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                                                <li><Link to='/profile'>Profile</Link></li>
+
+
+                                                <li onClick={handleLogout}><a>Logout</a></li>
+                                            </ul>
+                                        </div>
+                                    ) : (
+                                        <li><Link to='/login'>Login</Link></li>
+                                    )
+                                }
 
 
                         </ul>
@@ -39,13 +68,43 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex " >
                     <ul className="menu menu-horizontal  " id='navlist'>
-                    <li><Link to='/home'>Home</Link></li>
-                            <li><Link to='/services'>Services</Link></li>
-                            <li><Link to='/blog'>Blog</Link></li>
-                            <li><Link to='/contactus'>Contact Us</Link></li>
-                            {
-                                        user?.uid? <li><button onClick={handleLogout}>Sign out</button></li>: <li><Link to='/login'>Login</Link></li>
-                            }
+                        <li><Link to='/home'>Home</Link></li>
+                        <li><Link to='/services'>Services</Link></li>
+                        <li><Link to='/blog'>Blog</Link></li>
+                        {/* <div className="">
+                            <li tabIndex={1} className="  dropdown dropdown-bottom fih z-10 ">
+                                <Link>
+                                    Blogs
+                                    <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
+                                </Link>
+                                <ul tabIndex={1} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-40">
+                                    <li><Link to='/blog'>Blog</Link></li>
+                                    <li><Link to='/news'>News</Link></li>
+
+                                </ul>
+                            </li>
+                        </div> */}
+
+                        <li><Link to='/contactus'>Contact Us</Link></li>
+                        {
+                                    user?.uid ? (
+                                        <div className="dropdown dropdown-end  mt-4">
+                                            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                                <div className="w-10 rounded-full ">
+                                                    <img src={user.photoURL} alt='ddd' />
+                                                </div>
+                                            </label>
+                                            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                                                <li><Link to='/profile'>Profile</Link></li>
+
+
+                                                <li onClick={handleLogout}><a>Logout</a></li>
+                                            </ul>
+                                        </div>
+                                    ) : (
+                                        <li><Link to='/login'>Login</Link></li>
+                                    )
+                                }
 
 
                     </ul>
