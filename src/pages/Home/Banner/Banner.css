@@ -1,6 +1,6 @@
 #banner{
-    background-image: url('https://i.ibb.co/Gpxpvm2/petbanner.jpg');
-    opacity: 0.9;
+    /* background-image: url('https://i.ibb.co/Gpxpvm2/petbanner.jpg');
+    opacity: 0.9; */
  
 }
 .banners{
@@ -9,3 +9,6 @@
 .banner-index{
     z-index: 0;
 }
+
+/* Banner.css */
+

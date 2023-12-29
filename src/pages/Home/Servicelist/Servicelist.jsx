@@ -5,8 +5,8 @@ const handleV=()=>{
 }
 const Servicelist = () => {
     return (
-        <div className="flex mt-5 justify-evenly flex-wrap bg-gray-200">
-            <div className="card w-80 bg-base-100 shadow-xl p-5 ">
+        <div className="flex mt-5 justify-evenly flex-wrap ">
+            <div className="card w-80 bg-orange-200 shadow-xl p-5 ">
                 <figure><img src="https://i.ibb.co/1mmH7zD/pexels-tima-miroshnichenko-6235231.jpg" alt="Veterinary" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">Veterinary</h2>
@@ -18,7 +18,7 @@ const Servicelist = () => {
                 </div>
             </div>
            
-            <div className="card w-80 bg-base-100 shadow-xl p-5">
+            <div className="card w-80 bg-orange-200 shadow-xl p-5">
                 <figure><img src="https://i.ibb.co/T2fhxCP/petcare.jpg" alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">Daycare</h2>
@@ -29,7 +29,7 @@ const Servicelist = () => {
                     </div>
                 </div>
             </div>
-            <div className="card w-80 bg-base-100 shadow-xl p-5">
+            <div className="card w-80 bg-orange-200 shadow-xl p-5">
                 <figure><img src="https://i.ibb.co/qr9VTSm/daycare.jpg" alt="boarding" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">Boarding</h2>
@@ -40,7 +40,7 @@ const Servicelist = () => {
                     </div>
                 </div>
             </div>
-            <div className="card w-80 bg-base-100 shadow-xl p-5">
+            <div className="card w-80 bg-orange-200 shadow-xl p-5">
                 <figure><img src="https://i.ibb.co/ZdpH7q9/pexels-pavel-danilyuk-7055937.jpg" alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">Grooming</h2>

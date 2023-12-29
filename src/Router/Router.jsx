@@ -21,6 +21,7 @@ import UserProfile from "../Profile/UserProfile/UserProfile";
 import PrivateRoute from "./PrivateRoute";
 import Allusers from "../Profile/UserProfile/Allusers/Allusers";
 import Postblog from "../Profile/PostBlog/PostBlog";
+import OrderPage from "../Profile/OrderPage/OrderPage";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -89,6 +90,7 @@ export const router = createBrowserRouter([
         path: 'userprofile', // Remove the leading slash
         element:<UserProfile></UserProfile>
       },
+      
       {
         path: 'allusers', // Remove the leading slash
         element: <Allusers></Allusers>
@@ -96,6 +98,10 @@ export const router = createBrowserRouter([
       {
         path: 'postblog', // Remove the leading slash
         element: <Postblog></Postblog>
+      },
+      {
+        path: 'orderhistory', // Remove the leading slash
+        element: <OrderPage></OrderPage>
       }
       
     ]

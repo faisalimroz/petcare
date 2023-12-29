@@ -1,10 +1,36 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import { AuthContext } from '../providers/AuthProvider';
 
 
 
 const Profile = () => {
-    const isAdmin= true
+    const [isAdmin,setIsAdmin]=useState(false)
+    const {user}=useContext(AuthContext)
+    useEffect(() => {
+        const fetchUserRole = async () => {
+          try {
+            // Replace 'YOUR_API_ENDPOINT' with the actual endpoint to fetch the user role from MongoDB
+            const response = await fetch(`http://localhost:5000/users/${user.email}`);
+            const data = await response.json();
+    
+            if (data && data.role === 'admin') {
+              setIsAdmin(true);
+            }
+          } catch (error) {
+            console.error('Error fetching user role:', error);
+          }
+        };
+    
+        // Fetch the user's role when the component mounts
+        if (user && user.uid) {
+          fetchUserRole();
+        }
+      }, [user]);
+        console.log('user', user);
+    console.log('isAdmin', isAdmin);
+    console.log('user.role', user && user.role);
+   
 
     return (
         <div className=''>
@@ -19,12 +45,12 @@ const Profile = () => {
                     <ul className="menu p-4 w-80 min-h-full  text-base-content">
                         {/* Common links for all users */}
                         <li><Link to='postblog'><img className='h-8 w-8 ' src="https://i.ibb.co/zGv0jNF/content-writing.png " alt="salary" />PostBlog</Link></li>
-                        <li><Link to='updateprofile'><img className='h-8 w-8 ' src="https://i.ibb.co/mhq2T4p/update-user.png" alt="salary" />Update Profile</Link></li>
-
+                        <li><Link to='userprofile'><img className='h-8 w-8 ' src="https://i.ibb.co/ssJnSx3/image-removebg-preview-1.png" alt="salary" />User Profile</Link></li>
+                        <li><Link to='orderhistory'><img className='h-8 w-8 ' src="https://i.ibb.co/mhq2T4p/update-user.png" alt="salary" />Order History</Link></li>
                         {/* Links visible only for admin */}
                         {isAdmin && (
                             <>
-                                <li><Link to='adminhome'><img className='h-8 w-8 ' src="https://i.ibb.co/mtHSzh4/image.png" alt="salary" />Admin Home</Link></li>
+                                {/* <li><Link to='adminhome'><img className='h-8 w-8 ' src="https://i.ibb.co/3frnPGp/image-removebg-preview-3.png" alt="salary" />Admin Home</Link></li> */}
                                 <li><Link to='allusers'><img className='h-8 w-8 ' src="https://i.ibb.co/ssJnSx3/image-removebg-preview-1.png" alt="salary" />All Users</Link></li>
                             </>
                         )}
