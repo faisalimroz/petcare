@@ -8,6 +8,19 @@
 #copyright{
     background-color: #212529;  
 }
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  #footer {
+    margin-top: auto; /* Push the footer to the bottom */
+  }
+  
+  #copyright {
+    margin-top: auto; /* Push the copyright footer to the bottom */
+  }
 #copyright{
     
         display: flex;

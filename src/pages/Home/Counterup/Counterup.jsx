@@ -7,7 +7,7 @@ const Counterup = () => {
     return (
         <>
             <ScrollTrigger onEnter={() => setCounterStart(true)} onExit={() => setCounterStart(false)}>
-                <div className='counter-container '>
+                <div className='counter-container'>
                     <div className='counter'>
                         <h1 className='value'>
                             {counterStart && <CountUp start={0} end={200} duration={2} delay={0}></CountUp>}+

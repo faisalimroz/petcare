@@ -11,9 +11,13 @@
 }
 
 .info{
-    height: 340px;
+    height: 350px;
     width: auto;
     background-color: wheat;
+}
+#last{
+    height: 400px;
+    margin-top: 50px;
 }
 .helpline-img{
     height: 340px;
@@ -22,6 +26,15 @@
 }
 .helpline-img img{
    
+}
+#mail{
+    height: 120px; 
+}
+#maill{
+    height: 120px; 
+}
+#maill{
+    height: 120px; 
 }
 .mail{
     height: 100px;

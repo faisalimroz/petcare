@@ -7,7 +7,7 @@ h1{
     margin-left: 20px;
  }
  #navlist li{
-    height: 80px;
+    height: 75px;
     padding: 20px;
  }
  /* #navlist li:hover{
@@ -22,12 +22,12 @@ h1{
 
 /* Set your custom hover color */
 .menu-horizontal > li > a:hover {
-    color:black;
-    background-color: #FF6B55;
+    /* color:black; */
+    /* background-color: #FF6B55; */
 }
 #navlist li:hover{
-    background-color: #FF6B55;
+    /* background-color: #FF6B55; */
 }
 .signout:hover{
-    background-color: #FF6B55;
+    /* background-color: #FF6B55; */
 }

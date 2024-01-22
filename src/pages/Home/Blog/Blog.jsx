@@ -8,7 +8,7 @@ const Blog = () => {
     
     // setArrr(arrr.sort(0, 6))
     useEffect(()=>{
-        fetch('http://localhost:5000/blog')
+        fetch('https://petcare-server.vercel.app/blog')
         .then(res=>res.json())
         .then(data=>setBlog(data))
     },[])

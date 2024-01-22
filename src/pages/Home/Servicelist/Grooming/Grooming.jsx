@@ -37,11 +37,11 @@ const Grooming = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Calculate the total price based on the number of members and price per member
+    // Calculate the total price based on the Number of Pets and price per member
     const totalPrice = members * 1000;
 
     // Redirect to the Payment component with the totalPrice as a URL parameter
-    navigate(`/payment?totalPrice=${totalPrice}&category=${category}&location=${location}`);
+    navigate(`/payment?totalPrice=${totalPrice}`);
 
     // You can handle form submission here
     console.log('Date:', date);
@@ -54,11 +54,11 @@ const Grooming = () => {
   return (
     <div>
       <div>
-        <div id='' className="blog mx-auto ">
+        <div id='' className="blogs mx-auto ">
           <div className="blog-div">
             <figure><img className='blog-img' src="https://i.ibb.co/ZdpH7q9/pexels-pavel-danilyuk-7055937.jpg" alt="Shoes" /></figure>
             <h2 className="blog-title font-bold">Grooming</h2>
-            <p className='blog-p'>Adult dogs should have a complete veterinary examination at least once a year. Puppies need veterinary visits usually every 3 to 4 weeks until they are about 4 months old. Geriatric dogs (older than 7 to 8 years old) should see their veterinarian twice a year or more frequently because illness is more common in older pets and it can be identified sooner. Your veterinarian may recommend a wellness program for your pet, including routine blood work to monitor for problems such as early kidney or liver disease.</p>
+            <p className='blog-p'>Adult or Child dogs should have a complete grooming at least once a year. Puppies need grooming  usually every 3 to 4 weeks until they are about 4 months old. Geriatric dogs (older than 7 to 8 years old) should see their veterinarian twice a year or more frequently because illness is more common in older pets and it can be identified sooner. Your veterinarian may recommend a wellness program for your pet, including routine blood work to monitor for problems such as early kidney or liver disease.</p>
           </div>
           <div className='form-div'>
             <form onSubmit={handleSubmit} className="vertical-form">
@@ -67,14 +67,14 @@ const Grooming = () => {
                 <input type="date" value={date} onChange={handleDateChange} />
               </div>
               <div className="form-group">
-                <label>Number of Members:</label>
+                <label>Number of Pets:</label>
                 <button type="button" className='bg-green-200 p-2 ' onClick={handleRemoveMember}>-</button>
                 {members}
                 <button type="button" onClick={handleAddMember}>+</button>
               </div>
               
               <div className="form-group">
-                <p className='text-1xl'>Price per Member: ${members * 1000}</p>
+                <p className='text-1xl'>Price per Pets: ${members * 1000}</p>
               </div>
               <div className="form-group">
                 <button className='bg-green-200 p-2' type="submit">Pay</button>

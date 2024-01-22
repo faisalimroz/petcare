@@ -2,38 +2,57 @@ import { useParams } from 'react-router-dom';
 import './Blogdetails.css'
 import { useEffect, useState } from 'react';
 
-const Blogdetails = () => {
-    const {id}=useParams();
-    console.log(id)
-    const [packagePost,setPackagePost]=useState(null);
-    useEffect(()=>{
-       fetch('http://localhost:5000/blog')
-       .then(res=>res.json())
-       .then(data=>{
-           const post = data.find(post=>post.id===id);
-           setPackagePost(post)
-           console.log(packagePost)
-       })
-    },[])
+
+    const Blogdetails = () => {
+    const {bid}=useParams();
+    console.log(bid)
+    const [blogPost, setBlogPost] = useState(null);
+  
+  
+  
+    useEffect(() => {
+    console.log('idd',bid)
+    fetch(`https://petcare-server.vercel.app/blog/${bid}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to fetch blog details');
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log('big',data)
+        setBlogPost(data);
+      })
+      .catch(error => {
+        console.log(error);
+        // Handle the error, such as showing an error message
+      });
+  }, [bid]);
+  
+  // ...
+  
+  
     return (
-        <div>
-            <div>
-               <div id='' className="blog  mx-auto ">
-                
-                <div className="blog-div">
-                <figure><img className='blog-img' src="https://i.ibb.co/cLy8Q38/image.png" alt="Shoes"/></figure>
-                    <h2 className="blog-title font-bold">Web Developer</h2>
-                    <p className='blog-p'>If a dog chews shoes whose shoes does he choose? ChatGPT is a natural language processing tool driven by AI technology that allows you to have human-like conversations and much more with the chatbot. The language model can answer questions and assist you with tasks, such as composing emails, essays, and code</p>
-                   
-         
-           
-                </div>
-       
+      <div className=' mx-auto '>
+        {blogPost && blogPost.title ? (
+          <div id='blogdetail' className="blog ">
+            <div className="blog-div">
+              <figure>
+                <img id='blog-img' className='blog-img' src={blogPost.img} alt="Shoes" />
+              </figure>
+              <h2 className="blog-titles font-bold">{blogPost.title}</h2>
+              <p className='blog-p '>{blogPost.description}</p>
             </div>
-           
-        </div>
-        </div>
+            {/* <div className='mt-2'>
+              <Socialmedia></Socialmedia>
+            </div> */}
+          </div>
+        ) : (
+          <div>Loading...</div>
+        )}
+        
+      </div>
     );
-};
+  };
 
 export default Blogdetails;

@@ -68,7 +68,7 @@ const img_hosting_url = `https://api.imgbb.com/1/upload?expiration=600&key=${img
       };
       const saveUser = (name, email) => {
         const user = { name, email };
-        fetch('http://localhost:5000/users', {
+        fetch('https://petcare-server.vercel.app/users', {
           method: 'POST',
           headers: {
             'content-type': 'application/json',
@@ -98,9 +98,9 @@ const img_hosting_url = `https://api.imgbb.com/1/upload?expiration=600&key=${img
     return (
         <>
              <div className="hero min-h-screen ">
-                <div className="hero-content flex-col lg:flex-row-reverse bg-base-200">
+                <div className="hero-content flex-col lg:flex-row-reverse bg-amber-200">
 
-                    <div className="card md:w-1/2 flex-shrink-0 w-full max-w-sm shadow-2xl bg-green-100">
+                    <div className="card md:w-1/2 flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form className="card-body" onSubmit={handleSubmit(handleSignup)}>
                             <div className="form-control " >
                                 <label className="label" htmlFor="name">
@@ -142,7 +142,7 @@ const img_hosting_url = `https://api.imgbb.com/1/upload?expiration=600&key=${img
                     </div>
                     <div className="text-center lg:text-left md:w-1/2">
                         <h1 className="text-5xl font-bold">Signup now!</h1>
-                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                        <p className="py-6">Here is the sign in page. In this page you can sign in to our website. you just enter your name,email,password and a cover picture</p>
                     </div>
                 </div>
             </div>

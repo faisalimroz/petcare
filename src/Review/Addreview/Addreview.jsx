@@ -10,7 +10,7 @@ const Addreview= () => {
 
   const { user } = useContext(AuthContext);
   const userr=user.displayName;
-  console.log(userr)
+  console.log(userr);
 
   const handleStarClick = (newRating) => {
     // Update the selected stars array
@@ -28,8 +28,8 @@ const Addreview= () => {
 
   const handleSubmitReview = () => {
     // Send the rating and review message to the Node.js backend
-    // using an HTTP POST request
-    fetch('http://localhost:5000/reviews', {
+    // using an HTTP POST request 
+    fetch('https://petcare-server.vercel.app/reviews', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

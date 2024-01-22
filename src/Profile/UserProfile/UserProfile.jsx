@@ -28,13 +28,16 @@ const UserProfile = () => {
       {user && (
         <>
          
+         
          <h1>Name: {user.displayName}</h1>
           <h1>Email: {user.email}</h1>
+          
+          
        
           
           
           {/* Display user's current photo */}
-          <img id='updateprofile' src="https://i.ibb.co/q0ZsqHf/image.png" alt="User" />
+          <img id='updateprofile' src={user.photoURL}  alt="User" />
           {/* {user.photoURL && <img id='updateprofile' src={user.photoURL} alt="User" />} */}
           {/* <input className='mt-4'
             type="text"

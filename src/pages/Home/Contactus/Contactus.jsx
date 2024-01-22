@@ -14,24 +14,24 @@ const Contactus = () => {
                 <div className='helpline-img'>
                     <img src="https://i.ibb.co/qyjbT4L/helpline.webp" className="max-w-sm rounded-lg shadow-2xl" alt='help' />
                 </div>
-                <div className='info'>
+                <div className='info' id='last'>
                
-                  <div className='mail'>
+                  <div id='mail' className='mail'>
                     <h1 className='font-black'>Location</h1>
                     <p>petcare@gmail.com</p>
                     <p>+8801608827084</p>
 
                   </div>
-                  <div className='mail'>
+                  <div id='maill' className='mail'>
                     <h1  className='font-black'>Let's Talk</h1>
                     <p>168/170, Ave 01, Streets Suite 666 Mirpur DOHS, Bangladesh</p>
                 
 
                   </div>
-                  <div className='mail'>
+                  <div id='maill' className='mail'>
                     <h1  className='font-black'>Visit Us</h1>
-                    <p><a target='_blank' href='https://www.facebook.com/egenslab'>Facebook: https://www.facebook.com/egenslab</a></p>
-                    <p><a target='_blank' href=' https://www.twitter.com/egenslab'>Twitter: https://www.twitter.com/egenslab</a></p>
+                    <p><a target='_blank' href='https://www.facebook.com/petcare'>Facebook: https://www.facebook.com/egenslab</a></p>
+                    <p><a target='_blank' href=' https://www.twitter.com/petcare'>Twitter: https://www.twitter.com/egenslab</a></p>
            
 
                   </div>
@@ -39,6 +39,9 @@ const Contactus = () => {
 
             </div>
           <div className='mb-5'>
+               <div className='ml-[650px] mt-5'>
+               <h1 className='mx-auto'>Add your Review</h1>
+               </div>
               <Addreview></Addreview>
           </div>
         </div>

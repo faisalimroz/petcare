@@ -8,7 +8,7 @@ const Demo = () => {
 
   useEffect(() => {
     // Fetch reviews from the backend
-    axios.get('http://localhost:5000/reviews')
+    axios.get('https://petcare-server.vercel.app/reviews')
       .then(response => {
         setReviews(response.data);
         console.log(reviews)

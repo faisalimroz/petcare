@@ -10,7 +10,7 @@ const Servicelist = () => {
                 <figure><img src="https://i.ibb.co/1mmH7zD/pexels-tima-miroshnichenko-6235231.jpg" alt="Veterinary" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">Veterinary</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <p>Adult dogs should have a complete veterinary examination at least once a year.</p>
                     <div className="card-actions justify-end">
                     <button onClick={handleV} className="btn btn-primary"><Link to='/veterinary'>More Details</Link></button>
 
@@ -22,7 +22,7 @@ const Servicelist = () => {
                 <figure><img src="https://i.ibb.co/T2fhxCP/petcare.jpg" alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">Daycare</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <p>Doggy daycare provides your canine family members with physical exercise.</p>
                     <div className="card-actions justify-end">
                     <button className="btn btn-primary"><Link to='/daycare'>More Details</Link></button>
 
@@ -33,7 +33,7 @@ const Servicelist = () => {
                 <figure><img src="https://i.ibb.co/qr9VTSm/daycare.jpg" alt="boarding" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">Boarding</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <p>Dog boarding means a place your dog stays overnight.</p>
                     <div className="card-actions justify-end">
                     <button className="btn btn-primary"><Link to='/boarding'>More Details</Link></button>
 
@@ -44,7 +44,7 @@ const Servicelist = () => {
                 <figure><img src="https://i.ibb.co/ZdpH7q9/pexels-pavel-danilyuk-7055937.jpg" alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">Grooming</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <p>Adult or Child dogs should have a complete grooming at least once a year.</p>
                     <div className="card-actions justify-end">
                         <button className="btn btn-primary"><Link to='/grooming'>More Details</Link></button>
                     </div>

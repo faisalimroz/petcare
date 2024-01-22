@@ -57,7 +57,7 @@ const Postblog = () => {
                 const email = user.email;
 
                 // Make an axios POST request with the image URL
-                const response = await axios.post('http://localhost:5000/blog', {
+                const response = await axios.post('https://petcare-server.vercel.app/C', {
                     title,
                     description,
                     date,

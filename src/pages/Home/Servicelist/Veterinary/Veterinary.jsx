@@ -28,7 +28,7 @@ const Veterinary = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        //Calculate the total price based on the number of members and price per member
+        //Calculate the total price based on the Number of Pets and price per member
         const totalPrice = members * 1000;
 
 
@@ -45,7 +45,7 @@ const Veterinary = () => {
     return (
         <div>
               <div>
-               <div id='' className="blog  mx-auto ">
+               <div id='' className="blogs  mx-auto ">
                 
                 <div className="blog-div">
                 <figure><img className='blog-img' src="https://i.ibb.co/1mmH7zD/pexels-tima-miroshnichenko-6235231.jpg" alt="Shoes"/></figure>
@@ -62,13 +62,13 @@ const Veterinary = () => {
                             <input type="date" value={date} onChange={handleDateChange} />
                         </div>
                         <div className="form-group">
-                            <label>Number of Members:</label>
+                            <label>Number of Pets:</label>
                             <button type="button " className='bg-green-200 p-2  ' onClick={handleRemoveMember}>-</button>
                             {members}
                             <button type="button" onClick={handleAddMember}>+</button>
                         </div>
                         <div className="form-group">
-                            <p className='text-1xl'>Price per Member: ${members * 1000}</p>
+                            <p className='text-1xl'>Price per Pets: ${members * 1000}</p>
 
                         </div>
                         <div className="form-group">

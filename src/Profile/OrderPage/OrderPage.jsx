@@ -12,7 +12,7 @@ const OrderPage = () => {
   useEffect(() => {
     const fetchUserHistory = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/orderhistory/${user.email}`);
+        const response = await axios.get(`https://petcare-server.vercel.app/orderhistory/${user.email}`);
         setUserHistory(response.data);
       } catch (error) {
         setError('Error fetching user history');

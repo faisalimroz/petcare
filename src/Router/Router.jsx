@@ -22,6 +22,7 @@ import PrivateRoute from "./PrivateRoute";
 import Allusers from "../Profile/UserProfile/Allusers/Allusers";
 import Postblog from "../Profile/PostBlog/PostBlog";
 import OrderPage from "../Profile/OrderPage/OrderPage";
+import AllOrder from "../Profile/AllOrder/AllOrder";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -44,7 +45,7 @@ export const router = createBrowserRouter([
         element: <Payment></Payment>
       },
       {
-        path: '/blog/:id',
+        path: '/blog/:bid',
         element: <Blogdetails></Blogdetails>
       },
       
@@ -92,15 +93,19 @@ export const router = createBrowserRouter([
       },
       
       {
-        path: 'allusers', // Remove the leading slash
+        path: 'allusers',
         element: <Allusers></Allusers>
       },
       {
-        path: 'postblog', // Remove the leading slash
+        path: 'postblog',
         element: <Postblog></Postblog>
       },
       {
-        path: 'orderhistory', // Remove the leading slash
+        path: 'allorder',
+        element: <AllOrder></AllOrder>
+      },
+      {
+        path: 'orderhistory',
         element: <OrderPage></OrderPage>
       }
       
